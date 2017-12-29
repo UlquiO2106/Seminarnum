@@ -1,0 +1,11 @@
+a=-0.1;
+b=0.1;
+n=100;
+h=(b-a)/(n-1);
+x=linspace(a,b,n);
+A=Possion1D(n);
+f = @(y) y.^2;
+F=(h^2) * f(x);
+u=A/F;
+display(u);
+plot(x,u);
